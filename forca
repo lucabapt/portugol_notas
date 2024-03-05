@@ -1,0 +1,56 @@
+programa jogo_da_forca
+
+// Declaração de constantes
+constante MAX_TENTATIVAS = 6
+
+// Declaração de variáveis
+cadeia palavra_secreta, letra_chutada, palavra_com_acertos
+inteiro num_tentativas, acertos, erros
+
+// Inicialização de variáveis
+palavra_secreta := "banana"
+palavra_com_acertos := ""
+num_tentativas := 0
+acertos := 0
+erros := 0
+
+// Loop principal do jogo
+enquanto (acertos < tamanho(palavra_secreta) e erros < MAX_TENTATIVAS) faca
+    // Exibir a palavra com acertos e as tentativas restantes
+    escreva("Palavra: ", palavra_com_acertos)
+    escreva("Tentativas restantes: ", MAX_TENTATIVAS - erros)
+
+    // Ler a letra chutada pelo jogador
+    escreva("Digite uma letra: ")
+    leia(letra_chutada)
+
+    // Verificar se a letra já foi chutada
+    se (letra_chutada em palavra_com_acertos)
+        escreva("Essa letra já foi chutada!")
+        continuar
+    fimse
+
+    // Verificar se a letra está na palavra secreta
+    se letra_chutada em palavra_secreta
+        // A letra está na palavra secreta
+        acertos := acertos + 1
+        para i de 1 ate tamanho(palavra_secreta) faca
+            se palavra_secreta[i] = letra_chutada
+                palavra_com_acertos[i] := letra_chutada
+            fimse
+        fimpara
+    senao
+        // A letra não está na palavra secreta
+        erros := erros + 1
+    fimse
+
+fimlaco
+
+// Exibir a mensagem final
+se acertos = tamanho(palavra_secreta)
+    escreva("Você venceu! A palavra era ", palavra_secreta)
+senao
+    escreva("Você perdeu! A palavra era ", palavra_secreta)
+fimse
+
+fimprograma
