@@ -1,0 +1,33 @@
+programa {
+  funcao inicio() {
+    caracter op
+     
+     escreva ("-- Menu de opções --\n")
+     escreva ("1 - Acessar Sistema \n")
+     escreva ("2 - Testar conexão com a internet \n")
+     escreva ("3 - Sair do menu \n")
+
+
+
+     escreva ("Escolha sua opção: ")
+     leia (op)
+
+     limpa ()
+
+     se (op == '1')
+    {
+      escreva ("Bem Vindo, Aluno")
+    }
+
+    senao se ( op == '2')
+    {
+      escreva ("Conexao com a internet esta ok")
+    }
+
+    senao se (op == '3')
+    {
+      escreva ("Saindo")
+    }
+  
+  }
+}
