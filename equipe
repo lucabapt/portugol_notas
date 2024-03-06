@@ -1,0 +1,66 @@
+programa {
+  funcao inicio() {
+    cadeia equipeVencedora = "Empate!" , equipe1, equipe2, equipe3
+    inteiro pontuacao, pontuacaoVencedora = 0
+
+    escreva (" --- REGISTRO DE EQUIPES: CAMPEONATO: ---\n")
+
+    escreva("Insira o nome da equipe 1:")
+    leia (equipe1)
+
+
+    escreva("Insira a pontuação da equipe 1:")
+    leia(pontuacao)
+
+
+    se(pontuacao > pontuacaoVencedora)
+
+    {
+      equipeVencedora = equipe1
+      pontuacaoVencedora = pontuacao
+    }
+
+    senao se (pontuacao == pontuacaoVencedora)
+    {
+      equipeVencedora = "Empate!"
+    }
+
+    escreva("Insira o nome da equipe 2:")
+    leia(equipe2)
+
+
+    escreva("Insira a pontuacao da equipe: 2")
+    leia(pontuacao)
+
+    se(pontuacao > pontuacaoVencedora)
+    {
+      equipeVencedora = equipe2
+      pontuacaoVencedora = pontuacao
+    }
+
+    senao se(pontuacao == pontuacaoVencedora)
+    {
+      equipeVencedora = "Empate!"
+    }
+
+    escreva("Insira o nome da equipe 3")
+    leia(equipe3)
+
+    escreva("Insira a pontuação da equipe 3: ")
+    leia (pontuacao)
+
+    se(pontuacao > pontuacaoVencedora)
+    {
+      equipeVencedora = equipe3
+      pontuacaoVencedora = pontuacao 
+    }
+
+    senao se (pontuacao == pontuacaoVencedora)
+    {
+      equipeVencedora = "Empate!"
+    }
+
+    escreva("A equipe vencedora é ", equipeVencedora, " | Pontos", pontuacaoVencedora) 
+
+  }
+}
