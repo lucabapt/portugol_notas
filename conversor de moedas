@@ -1,0 +1,168 @@
+programa {
+  funcao inicio() {
+    caracter op, opFiduOrigem, opFiduConv
+    const real brasil_reais = 1, real_euro = 5.40, real_dolar = 4.94, real_libra = 6.31, real_peso = 171.49
+    const real euro_europ = 1 , euro_dolar = 1.09 , euro_libra = 0.85 , euro_peso = 926.30 , euro_real = 5.40
+    const real dolar_eua = 1 , dolar_libra = 0.78 , dolar_peso = 846.24 , dolar_real = 4.94 , dolar_euro = 0.91
+    const real libra_libra = 1 , libra_peso = 1083.96 , libra_real = 6.40 , libra_dolar = 1.28 , libra_euro = 1.17
+    const real peso_peso = 1 , peso_real = 0.0058 , peso_dolar = 0.0012 , peso_euro = 0.0054 , peso_libra = 0.00092
+    real seuDinheiro, valorInicial, valorFinal
+  
+
+    escreva (" ---- MENU DE OPÇÕES ---- \n")
+    escreva ("1 - Converter moedas fiduciárias\n")
+    escreva ("2 - Converter criptomoedas e altcoins\n")
+    escreva ("3 - encerrar programa\n")
+
+    escreva ("Escolha a sua opção: ")
+    leia (op)
+
+	se (op == '1')
+
+
+
+    limpa()
+
+      escreva (" ---- OPÇÕES DE MOEDA ORIGEM ----\n")
+      escreva ("1 - Real\n")
+      escreva ("2 - Euro\n")
+      escreva ("3 - Dolar\n")
+      escreva ("4 - Libra\n")
+      escreva ("5 - Peso\n")
+
+      escreva ("Escolha a moeda de origem: ")
+      leia (opFiduOrigem)
+    
+      escreva ("Insira a quantidade da moeda ",opFiduOrigem,": ")
+      leia (valorInicial)
+
+    limpa()
+
+    escreva ("---- OPÇÕES DA MOEDA CONVERTIDA---- \n")
+    escreva ("1 - Real\n")
+    escreva ("2 - Euro\n")
+    escreva ("3 - Dolar\n")
+    escreva ("4 - Libra\n")
+    escreva ("5 - Peso\n")
+
+    escreva ("Escolha a moeda de conversão: ")
+    leia (opFiduConv) 
+
+    
+     
+	
+
+    senao se (opFiduOrigem == '1' e opFiduConv == '2')
+    {
+    valorFinal = real_euro * brasil_reais * valorInicial  
+    escreva ("A conversão Real para euro é: ",valorFinal,".")
+    }
+
+    senao se (opFiduOrigem == '1' e opFiduConv == '3')
+    {
+    valorFinal = real_dolar * brasil_reais * valorInicial
+    escreva ("A conversao de Real para Dolar é: ",valorFinal,"")
+    }
+
+    senao se (opFiduOrigem == '1' e opFiduConv =='4')
+    {
+    valorFinal = real_libra * brasil_reais * valorInicial
+    escreva ("A conversão do Real para a Libra é: ",valorFinal,"")
+    }
+
+    senao se (opFiduOrigem == '1' e opFiduConv =='5')
+    {
+    valorFinal = real_peso * brasil_reais * valorInicial
+    escreva ("a conversão do real para a Peso é: ",valorFinal,"")
+    }
+    //--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+    senao se (opFiduOrigem == '2' e opFiduConv =='1')
+    {
+    valorFinal = euro_real * euro_europ * valorInicial
+    escreva ("a conversão do euro para real é: ",valorFinal,"")
+    }
+
+    senao se (opFiduOrigem == '2' e opFiduConv == '3')
+    {
+    valorFinal = euro_europ * euro_dolar * valorInicial
+    escreva ("a conversão do euro para o dolar é: ",valorFinal,"")
+    }
+
+    senao se (opFiduOrigem == '2' e opFiduConv == '4')
+    {
+      valorFinal = euro_europ * euro_libra * valorInicial
+     escreva ("a conversão do euro para o libra é: ",valorFinal,"")
+    }
+
+    senao se (opFiduOrigem == '2'e opFiduConv == '5')
+    {
+      valorFinal = euro_europ * euro_peso * valorInicial
+      escreva ("a conversão de euro para peso é: ",valorFinal,"")
+    }
+//-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+	senao se (opFiduOrigem == '3' e opFiduConv == '1'){
+		valorFinal = dolar_eua * dolar_real * valorInicial
+		escreva ("a conversão de dolar para real é: ",valorFinal,"")
+	}
+	
+	senao se (opFiduOrigem == '3' e opFiduConv == '2'){
+		valorFinal = dolar_eua * dolar_euro * valorInicial
+		escreva ("a conversão de dolar para euro é: ",valorFinal,"")
+	}
+
+	senao se (opFiduOrigem == '3' e opFiduConv == '4'){
+		valorFinal = dolar_eua * dolar_libra * valorInicial
+		escreva ("a conversão de dolar para libra é: ",valorFinal,"")
+	}
+
+	senao se (opFiduOrigem == '3' e opFiduConv == '5'){
+		valorFinal = dolar_eua * dolar_peso * valorInicial
+		escreva ("a conversão de dolar para peso é: ",valorFinal,"")
+	}
+//------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+	senao se (opFiduOrigem == '4' e opFiduConv == '1'){
+		valorFinal = libra_libra * libra_real * valorInicial
+		escreva ("a conversão de libra para real é: ",valorFinal,"")
+	}
+
+	senao se (opFiduOrigem == '4' e opFiduConv == '2'){
+		valorFinal = libra_libra * libra_euro * valorInicial
+		escreva ("a conversão de libra para euro é: ",valorFinal,"")
+	}
+
+	senao se (opFiduOrigem == '4' e opFiduConv == '3'){
+		valorFinal = libra_libra * libra_dolar * valorInicial
+		escreva ("a conversão de libra para dolar é: ",valorFinal,"")
+	}
+
+     senao se (opFiduOrigem == '4' e opFiduConv == '5'){
+		valorFinal = libra_libra * libra_peso * valorInicial
+		escreva ("a conversão de libra para peso é: ",valorFinal,"") 
+     }
+//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+     senao se (opFiduOrigem == '5' e opFiduConv == '1'){
+		valorFinal = peso_peso * peso_real * valorInicial
+		escreva ("a conversão de peso para real é: ",valorFinal,"")
+     }
+
+     senao se (opFiduOrigem == '5' e opFiduConv == '2'){
+		valorFinal = peso_peso * peso_euro * valorInicial
+		escreva ("a conversão de peso para euro é ",valorFinal,"")
+
+     }
+
+     senao se (opFiduOrigem == '5' e opFiduConv == '3'){
+		valorFinal = peso_peso * peso_dolar * valorInicial
+		escreva ("a conversão de peso para dolar é: ",valorFinal,"")
+     }
+
+     senao se (opFiduOrigem == '5' e opFiduConv == '4'){
+		valorFinal = peso_peso * peso_libra
+		* valorInicial
+		escreva ("a conversão de peso para libra: ",valorFinal,"")
+     }
+//-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+     
+  }
+}
